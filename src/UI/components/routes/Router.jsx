@@ -44,7 +44,7 @@ import AdminDashboard from "../admin/AdminDashboard"
 const Router = () => {
     return (
         <Routes>
-            <Route index element={<HomePage />}></Route>
+            <Route path={ROUTES.ROOT} element={<HomePage />}></Route>
 
             <Route path={ROUTES.FAV_CARDS} element={<FavCardsPage />}></Route>
             <Route path={ROUTES.CREATE_CARD} element={<CreateCardPage />}></Route>

@@ -12,7 +12,6 @@ const ROUTES = {
     EDIT_USER: '/edit-user',
     CREATE_CARD: '/create-card',
     EDIT_CARD: '/edit-card',
-    HOME_PAGE: '/home-page',
     ADMIN_PAGE: '/admin-dashboard',
 }
 
