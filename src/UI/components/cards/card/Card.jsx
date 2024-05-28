@@ -10,7 +10,7 @@ const CardComponent = ({ card, onDeleteCard, onLike }) => {
     const navigate = useNavigate();
     
     return (
-        <Card sx={{ minWidth: 280, maxWidth: 350 }} style={{ borderBottomRightRadius: 40, borderTopLeftRadius: 40 }} >
+        <Card sx={{ minWidth: 310, maxWidth: 310 }} style={{ borderBottomRightRadius: 40, borderTopLeftRadius: 40 }} >
             <CardActionArea
                 // navigate יעזור לנו בניתוב הגולש לדף אחר
                 onClick={() => navigate(`${ROUTES.CARD_DETAILS}/${card._id}`)}

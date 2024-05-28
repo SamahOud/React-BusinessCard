@@ -9,6 +9,8 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import IconButton from '@mui/material/IconButton'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
+import LoginIcon from '@mui/icons-material/Login';
+import AppRegistrationRoundedIcon from '@mui/icons-material/AppRegistrationRounded';
 
 import { useUser } from "../../../../components/users/providers/UserProvider"
 import  useUsers  from "../../../../components/users/hooks/useUsers"
@@ -83,24 +85,25 @@ const MenuBar = ({ isMenuOpen, anchorEl, onCloseMenu }) => {
                 </IconButton>{isDark ? 'Light' : 'Dark'}
             </MenuItem>
             
-
             { !user && (
                 <Box>
+                    <Divider />
                     <NavBarLink to={ROUTES.LOGIN}>
                         <MenuItem
-                            sx={{ display: { xs: "block", md: "none" }}}
+                            sx={{ ...styles, paddingLeft: 1, display: { xs: "block", md: "none" }}}
                             onClick={onCloseMenu}
                         >
-                            Login
+                            <LoginIcon sx={{marginRight: 1}}/>Login
                         </MenuItem>
                     </NavBarLink>
+                    <Divider />
 
                     <NavBarLink to={ROUTES.SIGNUP}>
                         <MenuItem
-                            sx={{ display: { xs: "block", md: "none" } }}
+                            sx={{ ...styles, paddingLeft: 1, display: { xs: "block", md: "none" } }}
                             onClick={onCloseMenu}
                         >
-                            SignUp
+                            <AppRegistrationRoundedIcon sx={{marginRight: 1}}/>SignUp
                         </MenuItem>
                     </NavBarLink>
                 </Box>
